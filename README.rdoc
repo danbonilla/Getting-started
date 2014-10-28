@@ -33,6 +33,6 @@ User stories so far...
 
 
 Visuals
-=======
+========
 
 Image files for the first few wireframes and ERDs, will be loaded to main area of this Github repo.
