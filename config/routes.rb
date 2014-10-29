@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  #line below is ensuring the GET request for '/' gets routed to the 'home' action
+  #in the 'StaticPagesController', therefore the URL 'static_pages/home' no longer works
+  root 'static_pages#home'
+  get 'static_pages/about'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
