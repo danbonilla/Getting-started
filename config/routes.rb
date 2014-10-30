@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  #line below is ensuring the GET request for '/' gets routed to the 'home' action
+  get 'users/new'
+
+  #Line below is ensuring the GET request for '/' gets routed to the 'home' action
   #in the 'StaticPagesController', therefore the URL 'static_pages/home' no longer works
   root 'static_pages#home'
-  # get 'static_pages/about'
+
+  # Line below replaced "get 'static_pages/about'" by creating a "names route" 'about'. This rule 
+  # is creating these two name routes: about_path -> '/about'  and  about_url -> 'http:www.bitsy.com/about'
   get 'about' => 'static_pages#about'
+  get 'signup' => 'users#new'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
