@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
   #Line below is ensuring the GET request for '/' gets routed to the 'home' action
   #in the 'StaticPagesController', therefore the URL 'static_pages/home' no longer works
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
   # is creating these two name routes: about_path -> '/about'  and  about_url -> 'http:www.bitsy.com/about'
   get 'about' => 'static_pages#about'
   get 'signup' => 'users#new'
+  resources :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.
